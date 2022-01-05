@@ -11,11 +11,10 @@ puts "----------"
 # 3. Update the first store (`@store1`) instance in the database. (Change its name or something.)
 
 @store1 = Store.find_by(id: 1)
-@store2 = Store.find_by(id: 2)
 @store1.name = "York Mall"
 @store1.save
 
-@store2.name = "new name"
+@store2 = Store.find_by(id: 2)
+@store2.name = "new Name"
 @store2.save
-puts @store2.name
 
